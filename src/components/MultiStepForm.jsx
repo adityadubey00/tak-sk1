@@ -5,6 +5,7 @@ import AddTasks from './AddTasks';
 import AddTeam from './AddTeam';
 import CreateProject from './CreateProject';
 import ProjectType from './ProjectType';
+import ResponseSubmitted from './ResponseSubmitted';
 
 const MultiStepForm = () => {
   const [step, setStep] = useState(0);
@@ -25,6 +26,8 @@ const MultiStepForm = () => {
       return <AddTasks nextStep={nextStep} prevStep={prevStep} />;
     case 5:
       return <AddTeam nextStep={nextStep} prevStep={prevStep} />;
+    case 6:
+      return <ResponseSubmitted setStep={setStep}/>;
     default:
       return < CreateProject nextStep={nextStep} />;
   }

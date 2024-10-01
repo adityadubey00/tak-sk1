@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const AddTeam = ({ prevStep }) => {
+const AddTeam = ({ prevStep,nextStep }) => {
   const [teamMembers, setTeamMembers] = useState([
     'Emma Castro',
     'Steve Mathew',
@@ -65,7 +65,7 @@ const AddTeam = ({ prevStep }) => {
           <button className="bg-gray-500 text-white px-4 py-2 rounded-md" onClick={prevStep}>
             Back
           </button>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-md">
+          <button onClick={nextStep} className="bg-blue-500 text-white px-4 py-2 rounded-md">
             Create Project
           </button>
         </div>
